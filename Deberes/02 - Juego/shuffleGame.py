@@ -30,7 +30,7 @@ state = {(row,col): (row,col) for row in range(ROWS) for col in range(COLUMNS)}
 
 pygame.init()
 display = pygame.display.set_mode((height,width))
-pygame.display.set_caption("shift-puzzle")
+pygame.display.set_caption("Juego - rompecabezas")
 display.blit (image, (0, 0))
 pygame.display.flip()
 
@@ -49,7 +49,7 @@ def swap(c,r):
 
 def rearrange_game():
     for i in range(RANDOM_MVS):
-        swap(np.random.randint(3),np.random.randint(3))
+        swap(np.random.randint(COLUMNS),np.random.randint(ROWS))
         pygame.time.delay(100)
 
 
@@ -74,4 +74,4 @@ while True:
         cl = int(clic[0] / dim_height)
         swap(cl,rw)
         if (initial_state == state):
-            message_display("Game over")
+            message_display("Terminó")
