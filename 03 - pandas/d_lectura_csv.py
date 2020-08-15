@@ -18,7 +18,7 @@ columns = ['id','artist','title','medium','year',
 
 df2 = pd.read_csv(path, nrows = 10,usecols=columns)
 
-df3 = pd.read_csv(path, nrows = 10,usecols=columns,index_col='id')
+df3 = pd.read_csv(path, usecols=columns,index_col='id')
 
 df3.to_pickle(save_path)
 df4 = pd.read_pickle(save_path)
