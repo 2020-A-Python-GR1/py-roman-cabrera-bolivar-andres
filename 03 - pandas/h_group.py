@@ -51,7 +51,9 @@ def llenar_valores_vacios(series, tipo):
             return series_valores_llenos
         
         if(tipo == 'mas_repetido'):
-            pass
+            mas_repetido = series.value_counts().idxmax()
+            series_valores_llenos = series.fillna(mas_repetido)
+            return series_valores_llenos
             
             
 def transformar_df(df):
