@@ -18,3 +18,4 @@ class IntroSpider(scrapy.Spider):
         print(prices)
         print(stocks)
         print(images)
+    

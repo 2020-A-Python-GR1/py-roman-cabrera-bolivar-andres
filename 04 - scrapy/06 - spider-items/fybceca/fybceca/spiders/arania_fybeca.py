@@ -9,7 +9,7 @@ class AraniaFybeca(scrapy.Spider):
     urls = [
         'https://www.fybeca.com/FybecaWeb/pages/search-results.jsf?cat=238&s=150Ypp=25'
     ]
-    
+
     def start_requests(self):
         for url in self.urls:
             yield scrapy.Request(url = url)
