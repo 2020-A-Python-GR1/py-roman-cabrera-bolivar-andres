@@ -5,12 +5,11 @@ Created on Tue Sep 22 07:18:52 2020
 @author: Bolivar Roman
 """
 
-
 import pandas as pd
 import numpy as np
 from datetime import date
 
-"""
+
 ## 1) Crea un Dataframe de 10 registros y 6 columnas y consigue las 5 primeros y los 5 ultimos registros
 arr = np.random.randint(0,10,60).reshape(10,6)
 df = pd.DataFrame(arr)
@@ -52,13 +51,14 @@ df6 = pd.DataFrame(arr6)
 
 df_transpuesto = df6.transpose()
 
-"""
 
 ## 7) Crear un Dataframe con 10 registros y 6 columnas y Ordenar el dataframe 1 vez por cada columna, ascendente y descendente
 
 arr7 = np.random.randint(0,10,60).reshape(10,6)
 df7 = pd.DataFrame(arr7)
 
+df7_asc = df7.apply(lambda x: x.sort_values().values)
+df7_desc = df7.apply(lambda x: x.sort_values(ascending = False).values)
 
 ## 8) Crear un Dataframe con 10 registros y 6 columnas llenas de números randomicos del 1 al 10 y seleccionar en un nuevo Dataframe solo los valores mayores a 7
 
