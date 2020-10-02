@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
-
-# Scrapy settings for fybceca project
+# Scrapy settings for item_fybeca project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'fybceca'
+BOT_NAME = 'item_fybeca'
 
-SPIDER_MODULES = ['fybceca.spiders']
-NEWSPIDER_MODULE = 'fybceca.spiders'
+SPIDER_MODULES = ['item_fybeca.spiders']
+NEWSPIDER_MODULE = 'item_fybeca.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'fybceca (+http://www.yourdomain.com)'
+#USER_AGENT = 'item_fybeca (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +45,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'fybceca.middlewares.FybcecaSpiderMiddleware': 543,
+#    'item_fybeca.middlewares.ItemFybecaSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'fybceca.middlewares.FybcecaDownloaderMiddleware': 543,
+#    'item_fybeca.middlewares.ItemFybecaDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,8 +63,10 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'fybceca.pipelines.FybcecaPipeline': 300,
-#}
+#
+#    'item_fybeca.pipelines.TransformarTituloAMinusculas': 100,
+#    'item_fybeca.pipelines.SoloCapsulasPipeline': 200
+# }
 FEED_FORMAT = 'json'
 FEED_URI = 'tmp/productos-fybeca.json'
 
